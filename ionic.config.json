@@ -1,0 +1,7 @@
+{
+  "name": "AddChild",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

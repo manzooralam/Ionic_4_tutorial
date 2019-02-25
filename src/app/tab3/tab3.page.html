@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <hr>
+  <div>
+    <ion-title>
+      Manzoor Alam
+    </ion-title>
+  </div>
+  <br><br>
+  <div>
+    <ion-title>
+      Connect Learner
+    </ion-title>
+    <ion-item>
+      <ion-input   [(ngModel)]="ch_name" placeholder="Enter your name" required></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-label>Choose school :</ion-label>
+      <ionic-selectable
+       placeholder="select"
+        [(ngModel)]="school" 
+        [items]="schools" 
+        itemValueField="id"
+        itemTextField="name"
+        [canSearch]="true"
+         (onChange)="schoolChange($event)">
+      </ionic-selectable>
+    </ion-item>
+      
+   
+    <ion-item>
+      <ion-label>Choose class std :{{ch_class}}</ion-label>
+      <ion-select [(ngModel)]="ch_class" placeholder="Select">
+        <ion-select-option value="std3">3 std</ion-select-option>
+        <ion-select-option value="std4">4 std</ion-select-option>
+        <ion-select-option value="std5">5 std</ion-select-option>
+        <ion-select-option value="std6">6 std</ion-select-option>
+        <ion-select-option value="std7">7 std</ion-select-option>
+        <ion-select-option value="std8">8 std</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Age :<b>{{ch_age}}</b></ion-label>
+        <ion-range  [(ngModel)]="ch_age" snaps=true  placeholder="select" pin=true min="3" max="120" color="secondary">
+          <ion-label slot="start">3</ion-label>
+          <ion-label slot="end">120</ion-label>
+        </ion-range>
+      </ion-item>
+
+   <ion-item>
+     <ion-label>UserId: </ion-label>
+     <ion-input  clearInput
+      [(ngModel)]="ch_userid" placeholder="Enter your userid" required></ion-input>
+   </ion-item>
+
+   <ion-item>
+      <ion-label>Password: </ion-label>
+      <ion-input type='password' clearInput
+       [(ngModel)]="ch_password" placeholder="Enter your password" required></ion-input>
+    </ion-item>
+  </div>
+  <div> 
+     <ion-button (click)="childDetailsSubmit()">Add child</ion-button>
+  </div>
+
+</ion-content>
