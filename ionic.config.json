@@ -1,0 +1,7 @@
+{
+  "name": "Ionic4YouTubePlayer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
