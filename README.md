@@ -97,15 +97,18 @@ this.fcm.onTokenRefresh().subscribe(token => {
 
 <a href="https://ibb.co/427SfC8"><img src="https://i.ibb.co/w7RQL8S/errors2.png" alt="errors2" border="0"></a>
 
-Changing these versions:
 
-``` 
-dependencies {
-        classpath 'com.android.tools.build:gradle:3.+'
-        classpath 'com.google.gms:google-services:3.+'
-    }
+#Changing these versions:
+
+ 
+ `  dependencies`
+ `  {`
+      `  classpath 'com.android.tools.build:gradle:3.+'`
+      `  classpath 'com.google.gms:google-services:3.+'`
+  `  }`
     
-    ```
+    
+    
 #Inside the plugin -> cordova-plugin-fcm-with-dependecy-updated -> src -> android ->FCMPlugin.gradle
  
  According to 
@@ -117,6 +120,7 @@ and
 #Platforms -> android ->project.properties:
 
 changed to this:
+
 ```
 target=android-27
 android.library.reference.1=CordovaLib
