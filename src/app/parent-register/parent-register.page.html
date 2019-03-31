@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ParentRegister</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+	<form [formGroup] = "formdata"
+		        (ngSubmit) = "onClickSubmit(formdata.value)" >
+     
+		<ion-item>
+		  <ion-label position="floating">Email</ion-label>
+		  <ion-input type="Email" [(ngModel)]="email" class = "fortextbox" formControlName="email_vn"></ion-input>
+		</ion-item>
+		<div class="validation-errors">
+		
+				<ng-container *ngFor="let validation of validation_messages.email_vn">
+						<div class="error-message" *ngIf="formdata.get('email_vn').hasError(validation.type) && (formdata.get('email_vn').dirty || formdata.get('email_vn').touched)">
+							{{ validation.message }}
+						</div>
+					</ng-container>
+		</div>
+
+		<ion-item>
+		  <ion-label position="floating">Password</ion-label>
+		  <ion-input type="password"  class = "fortextbox"  [(ngModel)]="password" formControlName = "password_vn"></ion-input>
+		</ion-item>
+		
+			<div class="validation-errors">
+				  	<ng-container *ngFor="let validation of validation_messages.password_vn">
+							<div class="error-message" *ngIf="formdata.get('password_vn').hasError(validation.type) && (formdata.get('password_vn').dirty || formdata.get('password_vn').touched)">
+								{{ validation.message }}
+							</div>
+						</ng-container>
+			</div>
+
+
+    <ion-item>
+		  <ion-label position="floating">Repeat Password</ion-label>
+		  <ion-input type="password" [(ngModel)]="rpassword" formControlName = "password_rvn" class = "fortextbox"></ion-input>
+		</ion-item>
+		   <div  class="validation-errors">
+				<ng-container *ngFor="let validation of validation_messages.password_rvn">
+					<div class="error-message" *ngIf="formdata.get('password_rvn').hasError(validation.type) && (formdata.get('password_rvn').dirty || formdata.get('password_rvn').touched)">
+						{{ validation.message }}
+					</div>
+				</ng-container>
+		</div> 
+		
+		 </form>
+		 
+
+	  </ion-list>
+
+	  <ion-button fill="solid" expand="block" color="dark" (click)="register()">SignUp</ion-button>
+    <ion-button fill="solid" expand="block" color="dark" routerLink="/parent-login">Back</ion-button>
+
+</ion-content>

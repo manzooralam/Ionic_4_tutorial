@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>ParentProfile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+   
+  <!-- <h2 *ngIf="p_info">{{p_info.payload.doc.data().name}}</h2> 
+
+  <h2 *ngIf="p_info">{{p_info.payload.doc.data().name}}</h2>  -->
+
+  <ion-item *ngFor="let pt of pt_info">
+    
+    <h2>{{pt.payload.doc.data().parent_name}}</h2> 
+  
+  </ion-item>
+  
+  <ion-button fill="solid" expand="block"  (click)="addChild()">Add Child</ion-button>
+
+  <ion-button fill="solid" expand="block" color="dark" (click)="logout()">Logout</ion-button>
+
+  <ion-item *ngFor="let child of child_info">
+    <ion-thumbnail item-start>
+    </ion-thumbnail>
+    <h2>{{child.payload.doc.data().ch_name}}</h2> 
+  
+  </ion-item>
+
+</ion-content>

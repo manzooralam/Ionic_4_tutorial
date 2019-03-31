@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chatting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="n_p">
+
+    <ion-row>
+          <ion-item>
+            <ion-label>Select child :  {{b_ch_name}}</ion-label>
+            <ion-select cancelText="Cancel" okText="Ok" [(ngModel)]="selected_ch">
+              <ion-select-option *ngFor="let child of child_info">{{child_info.payload.doc.data().ChName}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Select Activity :   {{b_tac}}</ion-label>
+            <ion-select cancelText="Cancel" okText="Ok" [(ngModel)]="selected_act">
+              <ion-select-option *ngFor="let act of activity">{{act.payload.doc.data().name}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+    </ion-row>
+
+
+
+  <ion-list>
+      <div *ngFor="let msg of message">
+         
+        <div *ngIf="msg.payload.doc.data().messageType=='question'">
+            <p class="ques">{{msg.payload.doc.data().message}}</p>
+
+          </div>
+
+          <div *ngIf="msg.payload.doc.data().messageType=='answer'">
+            <p class="ans"> {{msg.payload.doc.data().message}}</p>
+          </div>
+
+      </div>
+  </ion-list>
+
+  <ion-footer>
+    <ion-toolbar>
+
+      <div class="elem">
+        <ion-input type="text" placeholder="Type questions here" [(ngModel)]="message1"></ion-input>
+      </div>
+
+      <ion-button slot="start" fill="clear" (click)="openAttach()">
+        <ion-icon slot="start" name="attach"></ion-icon>
+      </ion-button>
+      <ion-button slot="end" fill="clear" (click)="sendMessage()">
+        <ion-icon slot="end" name="send"></ion-icon>
+      </ion-button>
+
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

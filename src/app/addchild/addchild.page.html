@@ -1,0 +1,162 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button>Add</ion-back-button>
+        </ion-buttons>
+    <ion-title>Add Child</ion-title>
+  </ion-toolbar>
+</ion-header>     
+
+<ion-content padding>
+
+  <h1 *ngFor="let i of list">
+    {{i.kv1}}</h1>
+    <div>
+      <ion-item>
+        <ion-input   [(ngModel)]="ch_name" placeholder="Child name" required></ion-input>
+      </ion-item>
+      <ion-item>
+  
+        <ion-label>Choose school :</ion-label>      {{notfoundschool}}
+  
+        <ionic-selectable
+        
+         [(ngModel)]="schoolnotfound"
+  
+         [canAddItem]="true" 
+         (onAddItem)="addNewSchool($event)"
+          [items]="schools" 
+          itemValueField="id"
+          itemTextField="name"
+          [canSearch]="true" 
+          [canClear]="true"
+          (onChange)="schoolChange($event)">
+        </ionic-selectable>
+      </ion-item>
+        
+     
+      <ion-item>
+        <ion-label>Choose class std :</ion-label>
+        <ion-select [(ngModel)]="ch_class" placeholder="Select">
+          <ion-select-option value="std3">3 std</ion-select-option>
+          <ion-select-option value="std4">4 std</ion-select-option>
+          <ion-select-option value="std5">5 std</ion-select-option>
+          <ion-select-option value="std6">6 std</ion-select-option>
+          <ion-select-option value="std7">7 std</ion-select-option>
+          <ion-select-option value="std8">8 std</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label>Age :<b>{{ch_age}}</b></ion-label>
+          <ion-range  [(ngModel)]="ch_age" snaps=true  placeholder="select" pin=true min="8" max="17" color="secondary">
+            <ion-label slot="start">8</ion-label>
+            <ion-label slot="end">17</ion-label>
+          </ion-range>
+        </ion-item>
+  
+     <ion-item>
+       <ion-label>UserId: </ion-label>
+       <ion-input  clearInput
+        [(ngModel)]="ch_userid" placeholder="Enter your userid" required></ion-input>
+     </ion-item>
+  
+     <ion-item>
+        <ion-label>Password: </ion-label>
+        <ion-input type='password' clearInput
+         [(ngModel)]="ch_password" placeholder="Enter your password" required></ion-input>
+      </ion-item>
+    </div>
+    <div> 
+       <ion-button (click)="childDetailsSubmit()">Add child</ion-button>
+    </div>
+
+
+  </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<ion-list>
+  <div style="text-align:center">
+
+        <form [formGroup] = "ch_formdata"
+             (ngSubmit) = "onClickSubmit(ch_formdata.value)" >
+    
+                <input type = "text" class = "form" name = "ch_name" placeholder = "Name" 
+                formControlName="ch_name">
+    
+            <div class="validation-errors">
+                <ng-container *ngFor="let validation of child_validation_msg.ch_name">
+                    <div class="error-message" *ngIf="ch_formdata.get('ch_name').hasError(validation.type) && (ch_formdata.get('ch_name').dirty || ch_formdata.get('ch_name').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+            </div>
+    
+           <br/>
+           <input type = "text" class = "fortextbox" name="ch_city" 
+              placeholder = "city name" formControlName = "ch_city">
+    
+              <div class="validation-errors">
+              
+                  <ng-container *ngFor="let validation of child_validation_msg.ch_city">
+                      <div class="error-message" *ngIf="ch_formdata.get('ch_city').hasError(validation.type) && (ch_formdata.get('ch_city').dirty || ch_formdata.get('ch_city').touched)">
+                        {{ validation.message }}
+                      </div>
+                    </ng-container>
+              </div>
+           <br/>
+           
+           <input type = "number" class = "fortextbox" name="ch_age" 
+           placeholder = "age enter" formControlName = "ch_age">
+ 
+           <div class="validation-errors">
+           
+               <ng-container *ngFor="let validation of child_validation_msg.ch_age">
+                   <div class="error-message" *ngIf="ch_formdata.get('ch_age').hasError(validation.type) && (ch_formdata.get('ch_age').dirty || ch_formdata.get('ch_age').touched)">
+                     {{ validation.message }}
+                   </div>
+                 </ng-container>
+           </div>
+        <br/>
+
+        <input type = "text" class = "fortextbox" name="ch_userid" 
+        placeholder = " user id" formControlName = "ch_userid">
+
+        <div class="validation-errors">
+        
+            <ng-container *ngFor="let validation of child_validation_msg.ch_userid">
+                <div class="error-message" *ngIf="ch_formdata.get('ch_userid').hasError(validation.type) && (ch_formdata.get('ch_userid').dirty || ch_formdata.get('ch_userid').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+        </div>
+     <br/>
+         
+     <input type = "password" class = "fortextbox" name="ch_password" 
+     placeholder = "password " formControlName = "ch_password">
+     <div class="validation-errors">
+
+         <ng-container *ngFor="let validation of child_validation_msg.ch_password">
+             <div class="error-message" *ngIf="ch_formdata.get('ch_password').hasError(validation.type) && (ch_formdata.get('ch_password').dirty || ch_formdata.get('ch_password').touched)">
+               {{ validation.message }}
+             </div>
+           </ng-container>
+     </div>
+           <br/>
+           <br/>
+           <input type = "submit"  [disabled] = "!ch_formdata.valid" class = "forsubmit" value = "Submit">
+        </form>
+    
+    </div>
+</ion-list> -->
+ 

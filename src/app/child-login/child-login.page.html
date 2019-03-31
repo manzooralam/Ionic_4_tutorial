@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>childLogin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <form [formGroup] = "formdata"
+        (ngSubmit) = "onClickSubmit(formdata.value)" >
+    
+        <ion-item>
+          <ion-label position="floating" >Email</ion-label>
+          <ion-input type="Email"  class = "fortextbox"  [(ngModel)]="email" formControlName="emailid" ></ion-input>
+        </ion-item>
+    
+    <div class="validation-errors">
+      
+        <ng-container *ngFor="let validation of validation_messages.emailid">
+            <div class="error-message" *ngIf="formdata.get('emailid').hasError(validation.type) && (formdata.get('emailid').dirty || formdata.get('emailid').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+    </div>
+        
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="Password" class = "fortextbox"  [(ngModel)]="password" formControlName = "passwd" ></ion-input>
+        </ion-item>
+    
+        <div class="validation-errors">
+        
+            <ng-container *ngFor="let validation of validation_messages.password">
+                <div class="error-message" *ngIf="formdata.get('passwd').hasError(validation.type) && (formdata.get('passwd').dirty || formdata.get('passwd').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+        </div>
+         </form>
+        </ion-list>
+    
+        <ion-button fill="solid" expand="block" color="dark" (click)="login()">Login</ion-button>
+        
+</ion-content>
