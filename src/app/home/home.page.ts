@@ -7,12 +7,19 @@ import { Http } from '@angular/http';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  count;
 
   constructor(public http:Http){
 
-    http.get('https://us-central1-ionidemo.cloudfunctions.net/helloWorld ')
+    http.get('https://us-central1-ionidemo.cloudfunctions.net/helloWorld')
     .subscribe((data) => {
       console.log('data', data);
+    })
+
+    http.get('https://us-central1-ionidemo.cloudfunctions.net/countTasks')
+    .subscribe((data) => {
+      console.log('data', data);
+      this.count = data.json().count;
     })
   }
 
