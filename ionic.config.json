@@ -1,0 +1,7 @@
+{
+  "name": "GetCurrentLocation",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

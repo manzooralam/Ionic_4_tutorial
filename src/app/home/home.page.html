@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="checkGPSPermission()">
+          Request GPS Accuracy
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Longitude: </ion-col>
+      <ion-col> {{locationCoords.longitude}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Latitude: </ion-col>
+      <ion-col>{{locationCoords.latitude}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Accuracy: </ion-col>
+      <ion-col>{{locationCoords.accuracy}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Timestamp: </ion-col>
+      <ion-col>{{locationCoords.timestamp | date:'medium'}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
