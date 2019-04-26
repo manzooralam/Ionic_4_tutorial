@@ -1,5 +1,7 @@
 {
   "name": "FetchAddressCoordinates",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -7,8 +7,43 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Ionic 4 Geolocation & Geocoder
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+   
+  <ion-content padding>
+    <h1>Get Location</h1>
+   
+    <ion-button (click)="getGeolocation()">
+      Get Location
+    </ion-button>
+    <ion-button (click)="watchLocation()">
+      Watch Location Updates
+    </ion-button>
+    <ion-button (click)="stopLocationWatch()">
+      Stop Location Watch
+    </ion-button>
+   
+    <div *ngIf="geoLatitude">
+      <p>Latitude : {{geoLatitude}}</p>
+      <p>Longitude : {{geoLongitude}}</p>
+      <p>Accuracy : {{geoAccuracy}}</p>
+      <p class="address-text">
+   
+        <span class="watch-text" *ngIf="isWatching; else notWatching">
+          Watching Location
+        </span>
+        <ng-template #notWatching>
+          Location Watch Stopped
+        </ng-template>
+   
+        <br>Address : {{geoAddress }}
+      </p>
+    </div>
+   
+  </ion-content>
 </ion-content>
