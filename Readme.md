@@ -211,5 +211,5 @@ page-home {
 >> That’s it you can now test your application in a real device after building apk using this command $ ionic cordova build android 
  
 
-## Issued And Resolved:
+## Issues :
 <a href="https://ibb.co/M6V5rPf"><img src="https://i.ibb.co/M6V5rPf/Screenshot-10.png" alt="Screenshot-10" border="0"></a>
