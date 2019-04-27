@@ -59,21 +59,21 @@ watch.subscribe((data) => {
 ## Step 2:
  Install Plugins for Application
  Here we used three plugins:
- ### A: cordova-plugin-android-permissions: 
+ ### A: Cordova-plugin-android-permissions: 
  Get permissions by showing the permission dialogue. We will use this plugin to get Geolocation access permission, but this can be used for any type of permission
  ```
   $ ionic cordova plugin add cordova-plugin-android-permissions
   $ npm install @ionic-native/android-permissions
 ```
 
-### B: cordova-plugin-request-location-accuracy: 
+### B: Cordova-plugin-request-location-accuracy: 
 Shows a dialogue to the user to turn on GPS we show in the image below so that the user does not need to leave the app or go to setting.
 ```
 $ ionic cordova plugin add cordova-plugin-request-location-accuracy
 $ npm install @ionic-native/location-accuracy
 ```
 
-### C:cordova-plugin-geolocation:
+### C: Cordova-plugin-geolocation:
 Finally after getting location access permission and turning on device GPS, we will fetch accurate device Geolocation coordinates using this Geolocation plugin.
 ```
 $ ionic cordova plugin add cordova-plugin-geolocation
