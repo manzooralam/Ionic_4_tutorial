@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+ADDED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.android.gms:play-services-location:15.0.1] C:\Users\Manzoor Alam\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.1.aar\c818eb523d3f516663f0858e5e54cde4\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Manzoor Alam\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\418d5c66ddb3dccea68562e1b9e117e4\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] C:\Users\Manzoor Alam\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.1.aar\07f818c9cb3141b24a2a37f3711a3648\AndroidManifest.xml:17:1-24:12
@@ -17,9 +17,9 @@ MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Manzoor Alam\.
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Manzoor Alam\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\13a8d47fa3621c62ee8036913bf046b6\AndroidManifest.xml:17:1-31:12
 MERGED from [:CordovaLib] F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Manzoor Alam\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\93f16a50a31ea75cb9790fa16807391e\AndroidManifest.xml:17:1-30:12
-INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
 	package
 		ADDED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:2:98-139
 		INJECTED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml
@@ -164,6 +164,10 @@ uses-feature#android.hardware.location.gps
 ADDED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:16:5-66
 	android:name
 		ADDED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:16:19-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from F:\HybridMobileApp\latest\Ionic_4_tutorial\platforms\android\app\src\main\AndroidManifest.xml:17:22-76
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Manzoor Alam\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\418d5c66ddb3dccea68562e1b9e117e4\AndroidManifest.xml:23:9-26:75
 	android:exported

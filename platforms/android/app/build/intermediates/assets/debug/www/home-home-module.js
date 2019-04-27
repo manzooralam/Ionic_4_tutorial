@@ -57,7 +57,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>\r\n      Ionic Blank\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  \r\n  <ion-grid fixed>\r\n    <ion-row>\r\n      <ion-col text-center>\r\n        <ion-button (click)=\"checkGPSPermission()\">\r\n          Request GPS Accuracy\r\n        </ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Longitude: </ion-col>\r\n      <ion-col> {{locationCoords.longitude}}</ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Latitude: </ion-col>\r\n      <ion-col>{{locationCoords.latitude}}</ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Accuracy: </ion-col>\r\n      <ion-col>{{locationCoords.accuracy}}</ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Timestamp: </ion-col>\r\n      <ion-col>{{locationCoords.timestamp | date:'medium'}}</ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n</ion-content>\r\n"
+module.exports = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>\r\n      Ionic Blank\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  \r\n  <ion-grid fixed>\r\n    <ion-row>\r\n      <ion-col text-center>\r\n        <ion-button (click)=\"checkGPSPermission()\">\r\n          Request GPS Accuracy\r\n        </ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Longitude: </ion-col>\r\n      <ion-col> {{locationCoords.longitude}}</ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Latitude: </ion-col>\r\n      <ion-col>{{locationCoords.latitude}}</ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Accuracy: </ion-col>\r\n      <ion-col>{{locationCoords.accuracy}}</ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"4\">Timestamp: </ion-col>\r\n      <ion-col>{{locationCoords.timestamp | date:'medium'}}</ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row>\r\n      <ion-col size=\"4\">Address: </ion-col>\r\n      <ion-col>{{locationAddress | json}}</ion-col>\r\n    </ion-row>\r\n\r\n</ion-grid>\r\n\r\n</ion-content>\r\n"
 
 /***/ }),
 
@@ -87,16 +87,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/android-permissions/ngx */ "./node_modules/@ionic-native/android-permissions/ngx/index.js");
 /* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
 /* harmony import */ var _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/location-accuracy/ngx */ "./node_modules/@ionic-native/location-accuracy/ngx/index.js");
+/* harmony import */ var _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/native-geocoder/ngx */ "./node_modules/@ionic-native/native-geocoder/ngx/index.js");
 
 
 
 
 
+
+//import {  NativeGeocoderReverseResult, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
 var HomePage = /** @class */ (function () {
-    function HomePage(androidPermissions, geolocation, locationAccuracy) {
+    function HomePage(androidPermissions, geolocation, locationAccuracy, nativeGeocoder) {
         this.androidPermissions = androidPermissions;
         this.geolocation = geolocation;
         this.locationAccuracy = locationAccuracy;
+        this.nativeGeocoder = nativeGeocoder;
         this.locationCoords = {
             latitude: "",
             longitude: "",
@@ -155,8 +159,23 @@ var HomePage = /** @class */ (function () {
             _this.locationCoords.longitude = resp.coords.longitude;
             _this.locationCoords.accuracy = resp.coords.accuracy;
             _this.locationCoords.timestamp = resp.timestamp;
+            _this.reverseGeocode(_this.locationCoords.latitude, _this.locationCoords.longitude);
         }).catch(function (error) {
             alert('Error getting location' + error);
+        });
+    };
+    HomePage.prototype.reverseGeocode = function (lat, lng) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.nativeGeocoder.reverseGeocode(lat, lng)
+                .then(function (result) {
+                //let newResult: NativeGeocoderResultModel = JSON.parse(JSON.stringify(result));
+                _this.locationAddress = JSON.parse(JSON.stringify(result));
+                resolve(_this.locationAddress);
+            })
+                .catch(function (error) {
+                reject(error);
+            });
         });
     };
     HomePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -167,7 +186,8 @@ var HomePage = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_2__["AndroidPermissions"],
             _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"],
-            _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_4__["LocationAccuracy"]])
+            _ionic_native_location_accuracy_ngx__WEBPACK_IMPORTED_MODULE_4__["LocationAccuracy"],
+            _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__["NativeGeocoder"]])
     ], HomePage);
     return HomePage;
 }());

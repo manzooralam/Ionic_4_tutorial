@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 
-
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
+ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+
+//import {  NativeGeocoderReverseResult, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
+
 
 @Component({
   selector: 'app-home',
@@ -14,12 +17,14 @@ export class HomePage {
 
   locationCoords: any;
   timetest: any;
- 
+  locationAddress:any;
+  
   constructor(
     private androidPermissions: AndroidPermissions,
     private geolocation: Geolocation,
-    private locationAccuracy: LocationAccuracy
-  ) {
+    private locationAccuracy: LocationAccuracy,
+     private nativeGeocoder: NativeGeocoder
+     ) {
     
     this.locationCoords = {
       latitude: "",
@@ -89,10 +94,54 @@ export class HomePage {
       this.locationCoords.longitude = resp.coords.longitude;
       this.locationCoords.accuracy = resp.coords.accuracy;
       this.locationCoords.timestamp = resp.timestamp;
+
+     this.reverseGeocode(this.locationCoords.latitude, this.locationCoords.longitude);
+
     }).catch((error) => {
       alert('Error getting location' + error);
     });
   }
+
+reverseGeocode(lat : number, lng : number) : Promise<any>
+  {
+   return new Promise((resolve, reject) =>
+   {
+      this.nativeGeocoder.reverseGeocode(lat, lng)
+      .then((result) =>
+      {  
+        //let newResult: NativeGeocoderResultModel = JSON.parse(JSON.stringify(result));
+         this.locationAddress  = JSON.parse(JSON.stringify(result));
+         resolve(this.locationAddress);
+      })
+      .catch((error: any) =>
+      {
+         reject(error);
+      });
+   });
+}
+
+//   getLocationAddress(lat,long){
+
+//     this.nativeGeocoder.reverseGeocode(52.5072095, 13.1452818, { useLocale: true, maxResults: 1 });
  
+//     function success(result) {
+//          var firstResult = result[0];
+//            console.log("First Result: " + JSON.stringify(firstResult));
+//   }
+ 
+//     function failure(err) {
+//               console.log(err);
+//   }
+// }
+
+// /////
+//     let options: NativeGeocoderOptions = {
+//       useLocale: true,
+//       maxResults: 5
+//   };
+//  // this.nativeGeocoder.reverseGeocode(success, error,lat, long, options)
+//   }
+
+  
 
 }

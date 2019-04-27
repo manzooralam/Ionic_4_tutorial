@@ -85,6 +85,6 @@
     <plugin name="cordova-plugin-android-permissions" spec="1.0.0" />
     <plugin name="cordova-plugin-request-location-accuracy" spec="2.2.3" />
     <plugin name="cordova-plugin-geolocation" spec="4.0.1" />
-    <engine name="android" spec="7.1.4" />
     <plugin name="cordova-plugin-nativegeocoder" spec="3.2.2" />
+    <engine name="android" spec="7.1.4" />
 </widget>

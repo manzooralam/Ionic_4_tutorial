@@ -60,12 +60,12 @@
         "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\13a8d47fa3621c62ee8036913bf046b6\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "F:\\HybridMobileApp\\GetCurrentLocation\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
-        "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
-    },
-    {
         "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
         "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "F:\\HybridMobileApp\\GetCurrentLocation\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
+        "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "F:\\HybridMobileApp\\GetCurrentLocation\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-mdpi_screen.png.flat",
-        "source": "F:\\HybridMobileApp\\GetCurrentLocation\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
-    },
-    {
         "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "F:\\HybridMobileApp\\GetCurrentLocation\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-mdpi_screen.png.flat",
+        "source": "F:\\HybridMobileApp\\GetCurrentLocation\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
     },
     {
         "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
@@ -220,16 +220,16 @@
         "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-hdpi_screen.png.flat",
-        "source": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\src\\main\\res\\drawable-port-hdpi\\screen.png"
+        "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_focused.xml.flat",
+        "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "F:\\HybridMobileApp\\GetCurrentLocation\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
         "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\13a8d47fa3621c62ee8036913bf046b6\\res\\layout\\notification_action_tombstone.xml"
     },
     {
-        "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_focused.xml.flat",
-        "source": "C:\\Users\\Manzoor Alam\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\418d5c66ddb3dccea68562e1b9e117e4\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+        "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-hdpi_screen.png.flat",
+        "source": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\src\\main\\res\\drawable-port-hdpi\\screen.png"
     },
     {
         "merged": "F:\\HybridMobileApp\\latest\\Ionic_4_tutorial\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
