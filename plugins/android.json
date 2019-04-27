@@ -34,6 +34,9 @@
     },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "com.getcurrentlocation.thinktac"
+    },
+    "cordova-plugin-nativegeocoder": {
+      "PACKAGE_NAME": "com.getcurrentlocation.thinktac"
     }
   },
   "dependent_plugins": {}
