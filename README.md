@@ -1,22 +1,22 @@
+(See more)[https://www.djamware.com/post/5c6ccd1f80aca754f7a9d1ec/push-notification-using-ionic-4-and-firebase-cloud-messaging]
 
-FCM (Firebase Cloud Messaging) is an excellent way to keep our users engaged with our app,
-and it also helps them by notifying them of important things that are happening.
+#### FCM (Firebase Cloud Messaging) is an excellent way to keep our users engaged with our app, and it also helps them by notifying them of important things that are happening.
 
-#Step 1:
+## Step 1:
 Create New Ionic Application
 ``` 
 $ionic start project_name template_name
 ```
-Step 2:
-#Install the Cordova and Ionic Native plugins
+## Step 2:
+Install the Cordova and Ionic Native plugins
 
 ``` 
 ionic cordova plugin add cordova-plugin-fcm-with-dependecy-updated
 npm install @ionic-native/fcm
 ```
 
-Step 3:
-#Now go into your app.module.ts file and import FCM and add it to the providers array:
+## Step 3:
+Now go into your app.module.ts file and import FCM and add it to the providers array:
 ```
 import { FCM } from '@ionic-native/fcm';
 
@@ -28,28 +28,28 @@ import { FCM } from '@ionic-native/fcm';
 })
 ```
 
-Step 4 :
+## Step 4 :
 
-#Register project to firebase console and get api key and google-services.json file:
+Register project to firebase console and get api key and google-services.json file:
 
 Like this
 <img src="https://docs.microsoft.com/en-us/azure/includes/media/notification-hubs-enable-firebase-cloud-messaging/specify-package-name-fcm-settings.png">
 
 and download the google-services.json file
 
-Step 5:
-#Updating package name inside ionic project:
+## Step 5:
+Updating package name inside ionic project:
 
  inside-> config.xml
  
- Step 6: 
-#Past google-services.json file:
+ # Step 6: 
+Past google-services.json file:
 
 inside the 
  platform -> android folder
  
- Step 7: 
-#Open your app.component.ts file and import the FCM plugin
+ ## Step 7: 
+Open your app.component.ts file and import the FCM plugin
 
 ```
 import { FCM } from '@ionic-native/fcm';
@@ -81,7 +81,7 @@ this.fcm.onTokenRefresh().subscribe(token => {
 
 
 ```
-#More details :
+## More details :
 
 [https://ionicframework.com/docs/native/fcm](https://ionicframework.com/docs/native/fcm)
 
@@ -90,7 +90,7 @@ this.fcm.onTokenRefresh().subscribe(token => {
 [https://javebratt.com/ionic-push-notification/](https://javebratt.com/ionic-push-notification/)
 
 
-#Issues  & resolved:
+## Issues  & resolved:
 
 <a href="https://ibb.co/3hpt2Rt"><img src="https://i.ibb.co/12rH1zH/errors1.png" alt="errors1" border="0"></a>
 
@@ -98,7 +98,7 @@ this.fcm.onTokenRefresh().subscribe(token => {
 <a href="https://ibb.co/427SfC8"><img src="https://i.ibb.co/w7RQL8S/errors2.png" alt="errors2" border="0"></a>
 
 
-#Changing these versions:
+## Changing these versions:
 
  
  `  dependencies`
@@ -109,7 +109,7 @@ this.fcm.onTokenRefresh().subscribe(token => {
     
     
     
-#Inside the plugin -> cordova-plugin-fcm-with-dependecy-updated -> src -> android ->FCMPlugin.gradle
+## Inside the plugin -> cordova-plugin-fcm-with-dependecy-updated -> src -> android ->FCMPlugin.gradle
  
  According to 
 
@@ -117,7 +117,7 @@ this.fcm.onTokenRefresh().subscribe(token => {
 
 and 
 
-#Platforms -> android ->project.properties:
+## Platforms -> android ->project.properties:
 
 changed to this:
 
@@ -139,3 +139,6 @@ cordova.gradle.include.3=cordova-plugin-fcm-with-dependecy-updated/auth-FCMPlugi
 
 ```
 
+## Reerence:
+
+(See more)[https://www.djamware.com/post/5c6ccd1f80aca754f7a9d1ec/push-notification-using-ionic-4-and-firebase-cloud-messaging]
