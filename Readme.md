@@ -25,6 +25,7 @@ Now we will create a new blank application
 $ npm install @ionic-native/geolocation
 ```
 This plugin will use device location service to fetch latitude, longitude, accuracy, altitude, altitudeAccuracy, altitudeAccuracy, heading, speed.
+
 (See more)[https://ionicframework.com/docs/native/geolocation]
 
 
@@ -34,6 +35,7 @@ This plugin will use device location service to fetch latitude, longitude, accur
 $ npm install @ionic-native/native-geocoder
 ```
 It will return address for provided coordinates, and also do reverse geocoding.
+
 (See more)[https://ionicframework.com/docs/native/native-geocoder]
 
 
@@ -220,3 +222,11 @@ page-home {
 
 ## Issues :
 <a href="https://ibb.co/M6V5rPf"><img src="https://i.ibb.co/M6V5rPf/Screenshot-10.png" alt="Screenshot-10" border="0"></a>
+
+
+## Reference :
+(See @ionic-native)[https://ionicframework.com/docs/native/]
+
+(See Geolocation plugin)[https://ionicframework.com/docs/native/geolocation]
+
+(See Geocoder plugin)[https://ionicframework.com/docs/native/native-geocoder]
