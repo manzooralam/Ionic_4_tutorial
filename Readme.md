@@ -1,8 +1,12 @@
+ (More details)[https://medium.com/enappd/using-geolocation-and-beacon-plugins-in-ionic-4-754b41304007]
+
+## Geolocation, GPS are not fancy words for anyone today. Every smart phone user knows they can use GPS to know their location in the world (in Google/Apple Map). Famous apps like Uber, Lyft make use of location data to book rides, etc. Apps for food delivery use GPS data for live tracking the delivery person.
+
+## There are several interesting features and plugins available in Ionic 4 to get the best out of a user’s location. These include near-field as well as GPS based location features. In this blog, we explore these features in depth, and how to use them in our own Ionic app. Let’s dive right in
+
 # Get Device Latitude, Longitude and Address using Geolocation and Native Geocoder Services in Ionic 4 Native Application
 
-#### Using Geolocation service we can get Lattitude, Longitude, Accuracy of location, Speed, Altitude etc of the device. After that Latitude and Longitude can be used to get Addresses available on these coordinates. To fetch address from coordinates of the device, we use Geocoder service
-
-(More details)[https://medium.com/enappd/using-geolocation-and-beacon-plugins-in-ionic-4-754b41304007]
+##### Using Geolocation service we can get Lattitude, Longitude, Accuracy of location, Speed, Altitude etc of the device. After that Latitude and Longitude can be used to get Addresses available on these coordinates. To fetch address from coordinates of the device, we use Geocoder service
 
 ## Step 1:
 Create a new Ionic Application
@@ -20,7 +24,9 @@ Now we will create a new blank application
  $ ionic cordova plugin add cordova-plugin-geolocation
 $ npm install @ionic-native/geolocation
 ```
-This plugin will use device location service to fetch latitude, longitude, accuracy, altitude, altitudeAccuracy, altitudeAccuracy, heading, speed
+This plugin will use device location service to fetch latitude, longitude, accuracy, altitude, altitudeAccuracy, altitudeAccuracy, heading, speed.
+(See more)[https://ionicframework.com/docs/native/geolocation]
+
 
  >Geocoder:
  ```
@@ -28,6 +34,7 @@ This plugin will use device location service to fetch latitude, longitude, accur
 $ npm install @ionic-native/native-geocoder
 ```
 It will return address for provided coordinates, and also do reverse geocoding.
+(See more)[https://ionicframework.com/docs/native/native-geocoder]
 
 
 ## Step 3: 
