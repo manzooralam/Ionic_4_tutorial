@@ -7,6 +7,40 @@ This is a basic ionic 4 tutorials
 >Ionic is builds on top of AngularJS and Apache cordova by using javascript technology.
 
 
+## -----------------****************************----------------------
+
+
+
+## status bar color changes:
+
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/7nLTNzX/appbarcolor.png" alt="appbarcolor" border="0"></a>
+ 
+ #### Step 1:
+    Add platform
+    
+    ` $ ionic cordova platform add android `
+    
+  #### Step 2:
+    Then add cordova plugin add cordova-plugin-statusbar
+    
+    ` $ cordova plugin add cordova-plugin-statusbar `
+    
+  #### Step 3:
+   Now Comes config.xml file 
+   add following lines in your preference list.
+```
+<preference name=”StatusBarOverlaysWebView” value=”true”/>
+<preference name=”StatusBarBackgroundColor” value=”green”/>
+<preference name=”StatusBarStyle” value=”lightcontent”/>  
+ ```
+you can use either words or color codes like(#387ef5) in value of StatusBarBackgroundColor.
+
+` Exampe: <preference name=”StatusBarBackgroundColor” value=”#387ef5″/> `
+
+
+  
+##  --------------*************************************--------------------   
+
 
 ## Icon & splash screen changes:
 
