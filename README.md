@@ -86,6 +86,109 @@ you can use either words or color codes like(#387ef5) in value of StatusBarBackg
    ` $ cordova run android `
  
 
+
+## Adding Ion Loading:
+
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/9cm0sz4/loader.png" alt="loader" border="0"></a>
+ 
+  It is similar to the progress bar in native android app
+   with loader icon and message.
+   eg. progressDialog = new ProgressDialog(this);
+   
+   
+  Ionic loading component is available in @ionic/angular so we don’t need to use any plugin for that. We simply need to import LoadingController in component or service.
+#### Step 1:
+
+  ```
+  import { Component } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+ 
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+})
+export class HomePage {
+ 
+  constructor(
+    public loadingController: LoadingController
+  ) {
+  }
+ 
+    ...
+    ...
+  
+}
+```
+We have two methods available create and dismiss, these return promises as callbacks
+
+```
+   this.loadingController.create({
+      message: 'This Loader Will Auto Hide in 2 Seconds',
+      duration: 20000,
+      cssClass:'custom-loader-class'
+    }).then((res) => {
+      res.present();
+ 
+      res.onDidDismiss().then((dis) => {
+        console.log('Loading dismissed! after 2 Seconds');
+      });
+    });
+   
+   ```
+   
+#### Step 3:
+changes in css
+
+```
+.custom-loader-class{
+    --background:#F4B004;
+    --spinner-color:#F94701;
+}
+```
+
+#### Another eg when call api/ server
+
+```
+import { Component } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+ 
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+})
+export class HomePage {
+ 
+   loaderToShow: any;
+ 
+  constructor(
+    public loadingController: LoadingController
+  ) {
+  }
+ 
+  showLoader() {
+    this.loaderToShow = this.loadingController.create({
+      message: 'This Loader will Not AutoHide'
+    }).then((res) => {
+      res.present();
+ 
+      res.onDidDismiss().then((dis) => {
+        console.log('Loading dismissed!');
+      });
+    });
+    this.hideLoader();
+  }
+ 
+  hideLoader() {
+    setTimeout(() => {
+      this.loadingController.dismiss();
+    }, 4000);
+  }
+  
+}
+
+```
  
 
 
