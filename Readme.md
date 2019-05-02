@@ -1,5 +1,7 @@
  (More details)[https://medium.com/enappd/using-geolocation-and-beacon-plugins-in-ionic-4-754b41304007]
+ 
  (More details)[https://www.freakyjolly.com/ionic-4-get-device-latitude-longitude-and-address-using-geolocation-and-native-geocoder-services-in-ionic-4-native-application/]
+ 
 
 ## Geolocation, GPS are not fancy words for anyone today. Every smart phone user knows they can use GPS to know their location in the world (in Google/Apple Map). Famous apps like Uber, Lyft make use of location data to book rides, etc. Apps for food delivery use GPS data for live tracking the delivery person.
 
@@ -230,5 +232,7 @@ page-home {
 (See Geolocation plugin)[https://ionicframework.com/docs/native/geolocation]
 
 (See Geocoder plugin)[https://ionicframework.com/docs/native/native-geocoder]
+
 (More details)[https://medium.com/enappd/using-geolocation-and-beacon-plugins-in-ionic-4-754b41304007]
- (More details)[https://www.freakyjolly.com/ionic-4-get-device-latitude-longitude-and-address-using-geolocation-and-native-geocoder-services-in-ionic-4-native-application/]
+
+(More details)[https://www.freakyjolly.com/ionic-4-get-device-latitude-longitude-and-address-using-geolocation-and-native-geocoder-services-in-ionic-4-native-application/]
