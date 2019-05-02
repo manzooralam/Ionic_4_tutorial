@@ -1,4 +1,5 @@
  (More details)[https://medium.com/enappd/using-geolocation-and-beacon-plugins-in-ionic-4-754b41304007]
+ (More details)[https://www.freakyjolly.com/ionic-4-get-device-latitude-longitude-and-address-using-geolocation-and-native-geocoder-services-in-ionic-4-native-application/]
 
 ## Geolocation, GPS are not fancy words for anyone today. Every smart phone user knows they can use GPS to know their location in the world (in Google/Apple Map). Famous apps like Uber, Lyft make use of location data to book rides, etc. Apps for food delivery use GPS data for live tracking the delivery person.
 
@@ -6,7 +7,6 @@
 
 # Get Device Latitude, Longitude and Address using Geolocation and Native Geocoder Services in Ionic 4 Native Application
 
-##### Using Geolocation service we can get Lattitude, Longitude, Accuracy of location, Speed, Altitude etc of the device. After that Latitude and Longitude can be used to get Addresses available on these coordinates. To fetch address from coordinates of the device, we use Geocoder service
 
 ## Step 1:
 Create a new Ionic Application
@@ -230,3 +230,5 @@ page-home {
 (See Geolocation plugin)[https://ionicframework.com/docs/native/geolocation]
 
 (See Geocoder plugin)[https://ionicframework.com/docs/native/native-geocoder]
+(More details)[https://medium.com/enappd/using-geolocation-and-beacon-plugins-in-ionic-4-754b41304007]
+ (More details)[https://www.freakyjolly.com/ionic-4-get-device-latitude-longitude-and-address-using-geolocation-and-native-geocoder-services-in-ionic-4-native-application/]
