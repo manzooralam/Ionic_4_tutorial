@@ -1,5 +1,9 @@
 # IonicFramework:
-(See more api)[https://ionicframework.com/docs/api/button]
+(See about document)[https://ionicframework.com/docs]
+
+(See about component)[https://ionicframework.com/docs/components]
+
+(See about native)[https://ionicframework.com/docs/native]
 
 This is a basic ionic 4 tutorials
 >Ionic framework provides tools & services for developing hybrid mobile apps using web technologies like- Css, Html5 and Sass etc.
