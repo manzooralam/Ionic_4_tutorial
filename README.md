@@ -5,6 +5,8 @@
 
 (See about native)[https://ionicframework.com/docs/native]
 
+(See ionic 4 lifecycle)[https://ionicframework.com/docs/lifecycle/angular]
+
 This is a basic ionic 4 tutorials
 >Ionic framework provides tools & services for developing hybrid mobile apps using web technologies like- Css, Html5 and Sass etc.
 
