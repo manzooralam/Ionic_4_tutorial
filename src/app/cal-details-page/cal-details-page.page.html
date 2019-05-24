@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="calendar">
+    <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+      (onCurrentDateChanged)="onCurrentDateChanged($event)" (onRangeChanged)="reloadSource(startTime, endTime)"
+      (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)"
+      (onTimeSelected)="onTimeSelected($event)">
+    </calendar>
+  </div>
+  {{selectedDate}}
+
+  <ion-grid fixed>
+
+    <ion-card>
+    <ion-row>
+      <ion-col size="4">Summary: </ion-col>
+      <ion-col> 4 hrs</ion-col>
+    </ion-row>
+    <ion-row>Check-out missing</ion-row>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-row>
+      <ion-col size="4"><b>Location</b></ion-col>
+      <ion-col size="4"><b>In/Out</b></ion-col>
+      <ion-col size="4"><b>Time</b></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4">Basement</ion-col>
+      <ion-col size="4">In</ion-col>
+      <ion-col size="4">08:00</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Main office</ion-col>
+      <ion-col size="4">Out</ion-col>
+      <ion-col size="4">12:00</ion-col>
+    </ion-row>
+     <ion-row>
+        <ion-col size="4">Main office</ion-col>
+        <ion-col size="4">In</ion-col>
+        <ion-col size="4">15:00</ion-col>
+      </ion-row>
+
+</ion-card>
+  </ion-grid>
+
+
+</ion-content>

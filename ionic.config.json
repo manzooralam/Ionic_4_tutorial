@@ -1,0 +1,7 @@
+{
+  "name": "Calende_Poc",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
