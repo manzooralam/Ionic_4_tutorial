@@ -1,18 +1,9 @@
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
 
 ## Firebase Cloud Functions:
  How to integrating firebase functions,
  following steps:
  
 ### Step 1: npm install -g firebase-tools
-
-## General info:
-info
-
 
 ### Step 2: firebase login 
    choose google account
