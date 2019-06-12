@@ -8,6 +8,10 @@
 
 (See ionic 4 lifecycle)[https://ionicframework.com/docs/lifecycle/angular]
 
+(see deploying)[https://ionicframework.com/docs/v3/intro/deploying/]
+
+(see publishing)[https://ionicframework.com/docs/v1/guide/publishing.html]
+
 This is a basic ionic 4 tutorials
 >Ionic framework provides tools & services for developing hybrid mobile apps using web technologies like- Css, Html5 and Sass etc.
 
