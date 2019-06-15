@@ -3,25 +3,25 @@
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/qM4wncV/youtube.png" alt="youtube" border="0"></a>
 
 
-#Step 1:
+## Step 1:
 Create New Ionic Application
 ``` 
 $ionic start project_name template_name
 ```
 
-#step 2:
+## step 2:
 Install the Cordova and Ionic Native plugins
 ```
 $ionic cordova plugin add cordova-plugin-youtube-video-player 
 $npm install @ionic-native/youtube-video-player
 ```
-#Step 3:
+## Step 3:
 Add preference for YouTube API KEY in config.xml file.
 ```
 <preference name="YouTubeDataApiKey" value="AIzaSyA2thzZ2XXXXXXXXXXXXXXXXXXX50Ras_A" />
 ```
 
-#Step 4:
+## Step 4:
 Import plugin in app.module.ts file
 
 ```
@@ -36,7 +36,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 ```
 
-#Step: 5
+## Step: 5
 Add button HTML in home.page.html file
 ```
 //for embed video
@@ -53,7 +53,7 @@ Add button HTML in home.page.html file
 <ion-button size="small" (click)="openVideo()">Open Video Player</ion-button>
 ```
 
-#Step: 6
+## Step: 6
 Now add this method in home.page.ts
 
 ```
@@ -78,18 +78,47 @@ export class HomePage {
 }
 ```
 
-#Step: 7
+## Step: 7
 Add platform 
 ```
 $ionic cordova platform add android
 ```
-#Step: 8
+## Step: 8
 Now run the project
 
 ```
 $ionic cordova run android
 ```
-#For more details:
+
+## Issues and resolved:
+iframe youtube url property binding not working:
+
+```
+import { DomSanitizer } from '@angular/platform-browser';
+
+constructor( 
+  private sanitizer: DomSanitizer   
+) {
+}
+
+ngOnInit() {
+ this.getTrustedUrl('http://someUrl');
+}
+
+getTrustedUrl(url:any){ 
+ this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+}
+```
+
+in template file:
+ ```
+ <iframe      
+  [src]='this.safeUrl'>
+</iframe>
+```
+ (see more)[https://stackoverflow.com/questions/39429293/url-sanitization-is-causing-refresh-of-the-embedded-youtube-video]
+ 
+## For more details:
 
 [https://ionicframework.com/docs/native/youtube-video-player](https://ionicframework.com/docs/native/youtube-video-player)
 
