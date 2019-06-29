@@ -21,7 +21,9 @@ This is a basic ionic 4 tutorials
 ## -----------------****************************----------------------
 
 
-## Ionic-4 tutorial  contents :
+## Ionic-4 tutorial  modules :
+* [Youtube_Api_Ionic_4](https://github.com/manzooralam/Ionic_4_tutorial/tree/Youtube_Api_Ionic_4)
+* [TurnOnDeviceGPS withoutLeave](https://github.com/manzooralam/Ionic_4_tutorial/tree/TurnOnDeviceGPS_withoutLeave_getGeolocation_Ionic_4)
 * [Calendar_ionic_4](https://github.com/manzooralam/Ionic_4_tutorial/tree/Calendar_ionic_4)
 * [FCM_Ionic_4](https://github.com/manzooralam/Ionic_4_tutorial/tree/FCM_Ionic_4)
 * [Chatting_QA_Ionic_4](https://github.com/manzooralam/Ionic_4_tutorial/tree/Chatting_QA_Ionic_4)
