@@ -217,6 +217,14 @@ export class HomePage {
 
 ```
  
+#### Set background image in ionic 4:
+
+```
+ion-content {
+  --background: url(../../assets/bg.jpg) no-repeat center/cover fixed;
+}
+```
+[Ref. URL](https://chrisgriffith.wordpress.com/2019/03/02/background-images-for-ionic-4/)
 
 
   
