@@ -38,7 +38,7 @@ This is a basic ionic 4 tutorials
 
 
 
-## status bar color changes:
+## set status bar color changes:
 
  <a href="https://imgbb.com/"><img src="https://i.ibb.co/7nLTNzX/appbarcolor.png" alt="appbarcolor" border="0"></a>
  
@@ -69,7 +69,7 @@ you can use either words or color codes like(#387ef5) in value of StatusBarBackg
 ##  --------------*************************************--------------------   
 
 
-## Icon & splash screen changes:
+## Set Icon & splash screen changes:
 
  #### step 1: 
    Takes icon size: 1024 * 1024 pixel, splash screen size: 2732 * 2732 pixel
@@ -111,10 +111,12 @@ you can use either words or color codes like(#387ef5) in value of StatusBarBackg
    #### Step 11:
    
    ` $ cordova run android `
+   
  
+##  --------------*************************************--------------------   
 
 
-## Adding Ion Loading:
+## Set custom LoadingController:
 
  <a href="https://imgbb.com/"><img src="https://i.ibb.co/9cm0sz4/loader.png" alt="loader" border="0"></a>
  
@@ -216,8 +218,10 @@ export class HomePage {
 }
 
 ```
+##  --------------*************************************--------------------   
  
-#### Set background image in ionic 4:
+
+## Set background image ionic 4:
 
 ```
 ion-content {
@@ -226,6 +230,8 @@ ion-content {
 ```
 [Ref. URL](https://chrisgriffith.wordpress.com/2019/03/02/background-images-for-ionic-4/)
 
+
+##  --------------*************************************--------------------   
 
   
     
